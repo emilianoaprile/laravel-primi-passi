@@ -13,12 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    
-    $data = [
 
-        'text' => 'Hello World!'
+// home
+Route::get('/', function (){
 
-    ];
-    return view('home', $data);
-});
+    return view('homePage');
+
+})->name('home');
+
+// about us
+Route::get('/about', function () {
+
+    return view('aboutPage');
+
+})->name('about');
+
+// c
+Route::get('/contacts', function () {
+
+    return view('contactsPage');
+
+})->name('contacts');
+
